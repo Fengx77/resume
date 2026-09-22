@@ -138,6 +138,8 @@
     background: #fafbfc;
   }
 
+  .frame { position: relative; }
+
   .frame object,
   .frame iframe {
     display: block;
@@ -147,12 +149,22 @@
     border: 0;
   }
 
+  /* 兜底提示:仅在 PDF 尚未加载完成时可见 */
   .fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 44px 24px;
     text-align: center;
     color: var(--muted);
     font-size: 14.5px;
+    line-height: 1.9;
+    pointer-events: none;
   }
+
+  .frame > iframe { position: relative; }
 
   .fallback a { color: var(--indigo); }
 
@@ -189,20 +201,53 @@
   </header>
 
   <div class="actions">
-    <a class="btn btn-primary" href="./resume.pdf" download>下载 PDF 简历</a>
-    <a class="btn btn-ghost" href="./resume.pdf" target="_blank" rel="noopener">在新窗口打开</a>
+    <a class="btn btn-primary" id="dl" href="./resume.pdf" download>下载 PDF 简历</a>
+    <a class="btn btn-ghost" id="op" href="./resume.pdf" target="_blank" rel="noopener">在新窗口打开</a>
   </div>
 
   <div class="frame">
-    <object data="./resume.pdf" type="application/pdf" title="冯训琦 · 前端开发工程师 · 简历">
-      <div class="fallback">
-        当前浏览器不支持内嵌显示 PDF,请
-        <a href="./resume.pdf" target="_blank" rel="noopener">点击此处打开简历</a>。
-      </div>
-    </object>
+    <div class="fallback" id="fb">简历加载中…</div>
+    <iframe id="viewer" src="./resume.pdf" title="冯训琦 · 前端开发工程师 · 简历"></iframe>
   </div>
 </div>
 
 <footer>本页仅用于简历展示 · 支持手机与电脑直接查看</footer>
+
+<script>
+(function () {
+  // PDF 走 jsDelivr CDN,实测国内 3.2–3.4s;GitHub Pages 直连需 13s 以上
+  var CDN = 'https://cdn.jsdelivr.net/gh/Fengx77/resume@main/resume.pdf';
+  var ORIGIN = './resume.pdf';
+
+  var viewer = document.getElementById('viewer');
+  var fb = document.getElementById('fb');
+  var dl = document.getElementById('dl');
+  var op = document.getElementById('op');
+  var settled = false;
+
+  function useFallback() {
+    if (settled) return;
+    settled = true;
+    viewer.src = ORIGIN;
+    dl.href = ORIGIN;
+    op.href = ORIGIN;
+    fb.textContent = 'CDN 未响应,已切换到备用线路,请稍候…';
+  }
+
+  viewer.addEventListener('load', function () {
+    settled = true;
+    fb.style.display = 'none';
+  });
+
+  viewer.src = CDN;
+  dl.href = CDN;
+  op.href = CDN;
+
+  // CDN 在部分网络下可能被拦,5 秒未加载完就回落到 GitHub Pages
+  setTimeout(function () {
+    if (!settled) useFallback();
+  }, 5000);
+})();
+</script>
 </body>
 </html>
