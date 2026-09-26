@@ -63,7 +63,7 @@ Vue 3  /TypeScript；Vite、Tailwind CSS、Uniapp、Uview、Element UI； Pinia�
 
 后端技术
 
-Java、MySQL、Redis、Sa-Token、MyBatis和MyBatis-Plus、RESTful API接口设计
+Java、SpringBoot、MySQL、Redis、Sa-Token、MyBatis和MyBatis-Plus、RESTful API接口设计
 
 性能与优化
 
@@ -141,7 +141,7 @@ ECharts、DataV、Meta2d、xgplayer、video.js；企业后台、视频平台、 
 
 –  配合后端使用 Java 编写部分轻量业务接口 ，完成简单的订单数据查询、状态校验与数据组装逻辑 ，快速支撑前端业务诉求 ，缓解后端迭代排期压力 ，提升模块整体交付效率。
 
-技术栈  · Vue3 / TypeScript / Pinia / Vue-Router / Element UI / Less / Java / MySQL / MyBatis-Plus
+技术栈  · Vue3 / TypeScript / Pinia / Vue-Router / Element-Plus / Less / Java / SpringBoot / MySQL / MyBatis-Plus
 
 卡诺亚交付管控与居魔方小程序                                                                             广东卡诺亚家居股份有限公司
 
@@ -159,7 +159,7 @@ ECharts、DataV、Meta2d、xgplayer、video.js；企业后台、视频平台、 
 
 –  协助后端编写 Java 轻量接口 ，实现工单查询、打卡数据校验、业务统计数据组装 ，配合完成小程序权限相关数据输出 ，支撑多角色小程序业务快速落地 ，缓解后端排期压力。
 
-技术栈  · Vue3 / TypeScript / Uniapp / Uview / WebSocket / Echarts / 高德地图SDK / Java / MySQL / MyBatis- Plus
+技术栈  · Vue3 / TypeScript / Uniapp / Uview / WebSocket / Echarts / 高德地图SDK / Java / SpringBoot / MySQL / MyBatis-Plus
 
 
 
