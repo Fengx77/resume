@@ -59,11 +59,11 @@ Email 1073336748@qq.com   电话 17328693794   学历 本科    电话 173286937
 
 前端技术
 
-Vue 3  /TypeScript；Vite、Tailwind CSS、Uniapp、Uview、Element UI； Pin ia、Vuex、Vue-Router、I18国际化、响应式与组件化开发、Web Socket实时通信
+Vue 3  /TypeScript；Vite、Tailwind CSS、Uniapp、Uview、Element UI； Pinia、Vuex、Vue-Router、I18国际化、响应式与组件化开发、Web Socket实时通信
 
 后端技术
 
-Java、MySQL、Redis、Sa-Token、MyBaties和MyBaties-Plus、RESTful API接口设计
+Java、MySQL、Redis、Sa-Token、MyBatis和MyBatis-Plus、RESTful API接口设计
 
 性能与优化
 
@@ -141,7 +141,7 @@ ECharts、DataV、Meta2d、xgplayer、video.js；企业后台、视频平台、 
 
 –  配合后端使用 Java 编写部分轻量业务接口 ，完成简单的订单数据查询、状态校验与数据组装逻辑 ，快速支撑前端业务诉求 ，缓解后端迭代排期压力 ，提升模块整体交付效率。
 
-技术栈  · Vue3 / TypeScript / Pinia / Vue-Router / Element UI / Less / Java / MySQL / MyBaties-Plus
+技术栈  · Vue3 / TypeScript / Pinia / Vue-Router / Element UI / Less / Java / MySQL / MyBatis-Plus
 
 卡诺亚交付管控与居魔方小程序                                                                             广东卡诺亚家居股份有限公司
 
@@ -209,7 +209,7 @@ ECharts、DataV、Meta2d、xgplayer、video.js；企业后台、视频平台、 
 
 –  封装通用请求拦截 ，处理网络异常、token 过期等场景；完成页面适配、兼容多款手机机型 ，保障小程序稳定运行。
 
-技术栈  · Vue2 / JavaScript / ElementUI / VantUI / ECharts / WebSocket / Vue-i18n / Axios / VueX / Vue- Router
+技术栈  · Vue2 / JavaScript / VantUI / ECharts / WebSocket / Vue-i18n / Axios / VueX / Vue- Router
 
 
 
